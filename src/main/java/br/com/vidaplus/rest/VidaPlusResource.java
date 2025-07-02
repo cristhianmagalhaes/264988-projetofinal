@@ -30,6 +30,8 @@ public class VidaPlusResource {
 	@Inject
 	ConsultaService consultaService;
 	
+	//Endpoints para PACIENTES
+	
 	@Path("pacientes")
 	@POST
 	@Consumes(MediaType.APPLICATION_JSON)
@@ -37,8 +39,6 @@ public class VidaPlusResource {
 	public void cadastrarPaciente(Paciente paciente) {
 		pacienteService.cadastrar(paciente);
 	}
-	
-	//Endpoints para PACIENTES
 	
 	@Path("pacientes/{id}")
 	@PUT
